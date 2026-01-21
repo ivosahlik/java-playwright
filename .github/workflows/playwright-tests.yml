@@ -2,12 +2,12 @@ name: Playwright Tests
 
 # Trigger the workflow on every push to any branch
 on:
-  push:
-    branches:
-      - '**'  # Run on every branch for every commit
-  pull_request:
-    branches:
-      - '**'  # Run on every pull request for any branch
+#  push:
+#    branches:
+#      - '**'  # Run on every branch for every commit
+#  pull_request:
+#    branches:
+#      - '**'  # Run on every pull request for any branch
 
 jobs:
   test:
