@@ -3,8 +3,8 @@
 # Fetch all remote branches to ensure the list is up-to-date
 git fetch --all
 
-# Get a list of all branches starting with "sample-code/"
-branches=$(git branch -r | grep "origin/sample-code/" | sed 's/origin\///')
+# Get a list of all branches starting with "java-playwright/"
+branches=$(git branch -r | grep "origin/java-playwright/" | sed 's/origin\///')
 
 # Loop through each branch and perform the update
 for branch in $branches; do
@@ -42,4 +42,4 @@ for branch in $branches; do
   echo "Successfully updated branch: $branch"
 done
 
-echo "All branches starting with 'sample-code/' have been processed."
+echo "All branches starting with 'java-playwright/' have been processed."
