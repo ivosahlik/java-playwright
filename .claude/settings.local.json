@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mvn compile exec:java:*)",
+      "Bash(if [ -f README.md ])",
+      "Bash(then cat README.md)",
+      "Bash(else echo \"No README.md found\")",
+      "Bash(fi)",
+      "Bash(if [ -d .cursor/rules ])",
+      "Bash(then ls -la .cursor/rules)",
+      "Bash(if [ -f .cursorrules ])",
+      "Bash(then cat .cursorrules)",
+      "Bash(if [ -f .github/copilot-instructions.md ])",
+      "Bash(then cat .github/copilot-instructions.md)"
+    ]
+  }
+}
