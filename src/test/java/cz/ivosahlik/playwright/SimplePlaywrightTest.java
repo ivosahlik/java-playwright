@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-public class ASimplePlaywrightTest {
+public class SimplePlaywrightTest {
 
     @Test
     void shouldShowThePageTitle() {

@@ -38,7 +38,7 @@ mvn clean install
 
 The project contains two versions of the same test:
 - `src/test/java/cz/ivosahlik/playwright/ASimplePlaywrightTest.java` - JUnit test (use `mvn test`)
-- `src/main/java/cz/ivosahlik/playwright/ASimplePlaywrightTest.java` - Standalone executable with main method (use `mvn compile exec:java -Dexec.mainClass="cz.ivosahlik.playwright.ASimplePlaywrightTest"`)
+- `src/main/java/cz/ivosahlik/playwright/ASimplePlaywrightTest.java` - Standalone executable with main method (use `mvn compile exec:java -Dexec.mainClass="cz.ivosahlik.playwright.SimplePlaywright"`)
 
 ## Project Architecture
 

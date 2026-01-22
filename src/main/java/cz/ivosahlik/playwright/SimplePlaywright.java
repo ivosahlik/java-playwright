@@ -5,10 +5,12 @@ import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 
-public class ASimplePlaywrightTest {
+@Slf4j
+public class SimplePlaywright {
 
     public static void main(String[] args) {
         Playwright playwright = Playwright.create();
@@ -30,11 +32,11 @@ public class ASimplePlaywrightTest {
         page.locator("button:has-text('Search')").click();
 
         int matchingSearchResults = page.locator(".card").count();
-        System.out.println("Matching search results: " + matchingSearchResults);
+        log.info("Matching search results: {}", matchingSearchResults);
         assert matchingSearchResults > 0 : "Expected search results to be greater than 0";
 
         String title = page.title();
-        System.out.println("Page title: " + title);
+        log.info("Page title: {}", title);
         assert title.contains("Practice Software Testing") : "Expected title to contain 'Practice Software Testing'";
 
         // získej texty
@@ -42,12 +44,12 @@ public class ASimplePlaywrightTest {
 
         assert !results.isEmpty() : "Expected results to not be empty";
 
-        System.out.println("\nSearch results:");
+        log.info("\nSearch results:");
         results.forEach(System.out::println);
 
         browser.close();
         playwright.close();
 
-        System.out.println("\nTest completed successfully!");
+        log.info("\nTest completed successfully!");
     }
 }
